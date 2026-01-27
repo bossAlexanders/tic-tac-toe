@@ -1,51 +1,41 @@
-PEP8 Compliance:
+# Code Quality Improvements Summary
 
-Fixed wildcard import (from tkinter import * → import tkinter as tk)
+## PEP8 Compliance
+- Fixed wildcard imports  
+  (`from tkinter import *` → `import tkinter as tk`)
+- Applied consistent spacing around operators and after commas
+- Wrapped long lines according to PEP8 recommendations
+- Improved variable naming for clarity  
+  (e.g., `draw` → `draw_count`)
 
-Consistent spacing around operators and after commas
+## Type Hints Added
+- Added type annotations for all function parameters and return values
+- Used appropriate typing imports (`List`, `Tuple`, `Optional`)
+- Annotated global variables in the main section
 
-Proper line wrapping for long lines
+## English Documentation
+- Translated all docstrings to English with clear, concise descriptions
+- Added a module-level docstring explaining the application purpose
+- Expanded function docstrings with detailed parameter and return value descriptions
 
-Descriptive variable names (e.g., draw → draw_count)
+## Code Structure Improvements
+- Split complex logic into smaller, focused functions
+- Introduced helper functions:
+  - `handle_win()`
+  - `handle_draw()`
+  - `switch_player()`
+  - `update_statistics()`
+  - `check_special_wins()`
+- Renamed functions to better reflect their responsibilities
+- Moved all GUI initialization logic into a dedicated `create_gui()` function
 
-Type Hints Added:
+## Improved Logic
+- Fixed win condition checks to ensure non-empty values are validated
+- Improved separation of concerns between UI, logic, and state management
+- Refactored logic to be more maintainable and testable
 
-Added type annotations for all function parameters and return values
-
-Used proper typing imports (List, Tuple, Optional)
-
-Annotated global variables in main section
-
-English Documentation:
-
-All docstrings translated to English with clear descriptions
-
-Module-level docstring explaining the application
-
-Detailed function documentation with parameter and return descriptions
-
-Code Structure:
-
-Split complex functions into smaller, focused functions
-
-Created handle_win(), handle_draw(), switch_player(), update_statistics(), check_special_wins()
-
-Improved function names for clarity
-
-Moved GUI creation to create_gui() function
-
-Improved Logic:
-
-Fixed the win condition check to include non-empty check
-
-Better separation of concerns
-
-More maintainable and testable code structure
-
-Visual Consistency:
-
-Renamed variables for consistency (procent → percent)
-
-Improved English labels in GUI
-
-Maintained original color scheme and layout
+## Visual Consistency
+- Renamed variables for consistent terminology  
+  (e.g., `procent` → `percent`)
+- Improved English labels and text in the GUI
+- Preserved the original color scheme and layout
